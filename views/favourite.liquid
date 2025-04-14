@@ -1,0 +1,140 @@
+{% render 'partials/head.liquid', title: 'Favorieten cadeaus ' %}
+
+<nav>
+    <a class="go-back" href="/">
+        <img class="back-img" src="/assets/back.svg" alt="back">Terug
+    </a>
+
+    <ul class="users">
+        <li>
+            <button class="new-list-btn"><img class="new-list-img" src="/assets/plusje.svg" alt="plusje"></button>
+            <p class="new-list-text">Nieuwe lijst</p>
+        </li>
+
+        <li>
+            <button class="wishlist-btn"><img class="wishlist-img" src="/assets/hart.svg" alt="hartje"></button>
+            <p class="wishlist-text">Wenslijst</p>
+        </li>
+
+        <li class="selected">
+            <button class="person-1-btn"><img class="person-1-img" src="/assets/riley.svg"
+                    alt="afbeedling Nadia"></button>
+            <button class="draw-btn"><img class="draw-img" src="/assets/tekenpen.svg" alt=""></button>
+            <h1 class="person-1-name">Nadia</h1>
+        </li>
+
+        <li>
+            <button class="person-2-btn"><img class="person-2-img" src="/assets/tom.svg" alt="afbeedling Tom"></button>
+            <p class="person-2-name">Tom</p>
+        </li>
+
+        <li>
+            <button class="person-3-btn"><img class="person-3-img" src="/assets/mia.svg" alt="afbeedling Mia"></button>
+            <p class="person-3-name">Mia</p>
+        </li>
+
+        <li>
+            <button class="person-4-btn"><img class="person-4-img" src="/assets/ben.svg" alt="afbeedling Ben"></button>
+            <p class="person-4-name">Ben</p>
+        </li>
+
+        <li>
+            <button class="person-5-btn"><img class="person-5-img" src="/assets/lily.svg"
+                    alt="afbeedling Lily"></button>
+            <p class="person-5-name">Lily</p>
+        </li>
+    </ul>
+</nav>
+
+
+<main class="favorites">
+
+    <div>
+        <section class="wrapper-search-person-chat">
+            <div class="recent-searches">
+                <img src="/assets/klokterug.svg" alt="">
+                <h2 class="search-chats">Recente zoekopdrachten voor Nadia</h2>
+            </div>
+
+            <a class="chats-person" href=""><img class="stripes-img" src="/assets/streepjes.svg" alt="">Ik zoek een
+                afstudeercadeau voor Nadia, die net is
+                afgestudeerd en nu klaar is om de volgende stap in het leven te zetten. Wat zijn leuke en betekenisvolle
+                cadeaus om deze prestatie te vieren</a>
+
+            <a class="chats-person" href=""><img class="stripes-img" src="/assets/streepjes.svg" alt="">Ik ben op zoek
+                naar een origineel en persoonlijk
+                verjaardagscadeau voor Nadia, die een passie heeft voor [hobby of interesse, bijvoorbeeld kunst,
+                technologie of reizen]. Wat zijn leuke en unieke cadeau-ideeën die passen bij haar interesses</a>
+
+            <a class="chats-person" href=""><img class="stripes-img" src="/assets/streepjes.svg" alt="">Ik zoek een
+                kerstcadeau voor Nadia, iemand die van
+                [specifieke interesse, zoals koken, films of sport] houdt. Wat zijn leuke en praktische cadeau-ideeën
+                die perfect zijn voor de feestdagen?</a>
+
+            <a class="chats-person" href=""><img class="stripes-img" src="/assets/streepjes.svg" alt="">Ik ben op zoek
+                naar een cadeau voor Nadia, die
+                gepassioneerd is over reizen. Wat zijn handige en innovatieve cadeau-ideeën die haar kunnen helpen bij
+                het verkennen van nieuwe plekken</a>
+
+            <a class="chats-person" href=""><img class="stripes-img" src="/assets/streepjes.svg" alt="">Nadia heeft
+                onlangs een nieuwe baan, en ik wil graag een
+                praktisch cadeau vinden dat haar kan helpen bij deze nieuwe fase in het leven. Wat zijn handige en
+                stijlvolle cadeaus voor iemand die net een carrièrestap heeft gemaakt</a>
+
+            <a class="chats-person" href=""><img class="stripes-img" src="/assets/streepjes.svg" alt="">Nadia is echt
+                geïnteresseerd in technologie, en ik zoek
+                een cadeau dat past bij haar liefde voor gadgets en innovatie. Wat zijn de nieuwste en coolste
+                technologie-cadeaus die ik voor Nadia kan kopen</a>
+            {% comment %}
+        </section>
+
+        <section> {% endcomment %}
+            <h2 class="not-perfect-gift">Nog steeds niet het perfecte cadeau gevonden?</h2>
+            <a class="go-to-search-gifts" href="/"><img src="/assets/search.svg" alt="">Ga verder met zoeken voor Nadia
+            </a>
+        </section>
+    </div>
+
+    <div class="divider-favorite"></div>
+
+    <div class="wrapper-flter-chat-upload-list">
+    <div class="chat-filters">
+        <span class="filters-person"><img src="/assets/koken.svg" alt="">Kookliefhebber</span>
+        <span class="filters-person"><img src="/assets/wolkje.svg" alt="">Dromer</span>
+        <span class="filters-person"><img src="/assets/games.svg" alt="">Spelliefhebber</span>
+    </div>
+
+    <div class="list-upload">
+        <p class="prive-list">Deze lijst is privé</p>
+        <button class="upload"><img src="/assets/upload.svg" alt=""></button>
+    </div>
+    </div>
+
+
+    <p class="favourites-count">Aantal favorieten: <span class="number-count">{{ favourites | size }}</span></p>
+
+    {% if favourites and favourites.size > 0 %}
+    <article class="all-favorite-gifts">
+        {% for product in favourites %}
+        {% include 'partials/card.liquid' with item, size: 'medium', item: product %}
+        {% endfor %}
+    </article>
+    {% else %}
+    <section class="empty-favorites">
+        <h4 class="no-favorite">Geen Favorieten gevonden</h4>
+        <a class="discover" href="/">Ontdek de cadeaus</a>
+    </section>
+
+    {% endif %}
+
+    <h2>Nadia vind dit misschien ook leuk</h2>
+
+    <article class="more-products">
+        {% for item in items %}
+        {% include 'partials/card.liquid' with item, size: 'xl' %}
+        {% endfor %}
+    </article>
+</main>
+
+
+{% render 'partials/footer.liquid' %}
