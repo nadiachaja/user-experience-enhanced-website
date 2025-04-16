@@ -103,7 +103,8 @@ header {
 }
 
 .favourite-list-img {
-    height: fit-content;
+    height: 1.5em;
+    width: 1.5em;
 }
 
 .create-list {
@@ -126,6 +127,11 @@ header {
     height: fit-content;
     border: 1px solid var(--bg-filters-not-choose);
     box-shadow: var(--box-shadow-s);
+}
+
+.profile-img{
+    height: 1.5em;
+    width: 1.5em;
 }
 
 .products-home {
@@ -201,6 +207,11 @@ section.wrapper-spotters-join {
     height: 25em;
     border: none;
     border-radius: var(--border-radius-m);
+}
+
+.filter-img{
+    width: 2.5em;
+    height: 2.5em;
 }
 
 fieldset {
@@ -384,6 +395,11 @@ input::placeholder {
     margin-bottom: 2em;
 }
 
+.search{
+    height: 1.5em;
+    width: 1.5em;
+}
+
 /*MARK: CARDS*/
 
 .card {
@@ -445,10 +461,12 @@ input::placeholder {
 
 .saved-spotters-img {
     width: 3.5em;
+    height: 3em;
 }
 
 .gived-cadeau-img {
     width: 2em;
+    height: 2em;
 }
 
 .product-saved {
@@ -559,6 +577,7 @@ svg {
 
 .img-person-regsiter {
     width: 5.5em;
+    height: 6em;
     position: relative;
     left: 5em;
     bottom: 1em;
@@ -567,6 +586,7 @@ svg {
 
 .img-bloem-register {
     width: 4.5em;
+    height: 5em;
     position: relative;
     left: 1.5em;
     bottom: 4em;
