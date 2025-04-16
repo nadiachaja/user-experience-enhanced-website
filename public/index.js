@@ -23,7 +23,8 @@ if ('fetch' in window && 'DOMParser' in window) {
                 body: new URLSearchParams(new FormData(form))
             }).then((response) => {
                 form.classList.remove('is-loading')
-                if (response.statusText == 'OK') {
+                // if (response.statusText == 'OK') {
+                if (response.ok) {
                     const isSaved = form.querySelector('[name="liked_status"]')
                     if (isSaved.value) {
                         isSaved.value = ''

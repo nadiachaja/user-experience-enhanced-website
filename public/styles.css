@@ -4,17 +4,11 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: auto;
+html,
+body {
+    scroll-behavior: smooth;
 }
 
-@supports (scroll-behavior: smooth) {
-
-    html,
-    body {
-        scroll-behavior: smooth;
-    }
-}
 
 body {
     background-color: var(--bg-general);
@@ -129,7 +123,7 @@ header {
     box-shadow: var(--box-shadow-s);
 }
 
-.profile-img{
+.profile-img {
     height: 1.5em;
     width: 1.5em;
 }
@@ -209,7 +203,7 @@ section.wrapper-spotters-join {
     border-radius: var(--border-radius-m);
 }
 
-.filter-img{
+.filter-img {
     width: 2.5em;
     height: 2.5em;
 }
@@ -395,7 +389,7 @@ input::placeholder {
     margin-bottom: 2em;
 }
 
-.search{
+.search {
     height: 1.5em;
     width: 1.5em;
 }
@@ -422,11 +416,11 @@ input::placeholder {
 }
 
 @keyframes rotation {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
 
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
@@ -615,7 +609,7 @@ svg {
     min-height: 100vh;
     overflow: hidden;
 
-    display: flex; 
+    display: flex;
     flex-direction: column;
 }
 
@@ -623,7 +617,7 @@ svg {
 @media screen and (min-width: 1000px) {
     @supports (display: grid) {
         .product {
-            display: grid; 
+            display: grid;
             grid-template-columns: 50% 1fr max-content;
             grid-template-rows: max-content max-content max-content 1fr;
             grid-template-areas:
@@ -744,13 +738,13 @@ svg {
     line-height: var(--line-height-m);
     font-weight: var(--font-weight-normal);
 
-    grid-area: info; 
+    grid-area: info;
 }
 
 @media screen and (min-width: 1000px) {
     @supports (display: grid) {
         .description {
-            display: grid; 
+            display: grid;
             grid-template-columns: max-content 1fr;
             grid-template-rows: 1fr max-content 1fr max-content 1fr;
             grid-template-areas:
@@ -1136,7 +1130,7 @@ p.wishlist-text {
 
 .selected {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 @supports (display: grid) {
@@ -1323,5 +1317,3 @@ p.wishlist-text {
         justify-content: space-between;
     }
 }
-
-
