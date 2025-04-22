@@ -1,37 +1,48 @@
 @font-face {
     font-family: 'Parkinsans';
-    src: url('/font/Parkinsans-Regular.ttf');
+    src: url('/font/Parkinsans-Regular.woff2')format('woff2');
     font-weight: 400;
+    font-display: swap
 }
 
 @font-face {
     font-family: 'Parkinsans';
-    src: url('/font/Parkinsans-Bold.ttf');
+    src: url('/font/Parkinsans-Bold.woff2')format('woff2');
     font-weight: 600;
+    font-display: swap
 }
 
 @font-face {
     font-family: 'Parkinsans';
-    src: url('/font/Parkinsans-ExtraBold.ttf');
+    src: url('/font/Parkinsans-ExtraBold.woff2')format('woff2');
     font-weight: 800;
+    font-display: swap
 }
 
 @font-face {
     font-family: 'Parkinsans';
-    src: url('/font/Parkinsans-Light.ttf');
+    src: url('/font/Parkinsans-Light.woff2')format('woff2');
     font-weight: 300;
+    font-display: swap
 }
 
 @font-face {
     font-family: 'Parkinsans';
-    src: url('/font/Parkinsans-Medium.ttf');
+    src: url('/font/Parkinsans-Medium.woff2')format('woff2');
     font-weight: 500;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('/font/Parkinsans-SemiBold.woff2')format('woff2');
+    font-weight: 700;
+    font-display: swap
 }
 
 body {
     font-family: 'Parkinsans', sans-serif;
 }
-
 
 
 /* COLOR */
