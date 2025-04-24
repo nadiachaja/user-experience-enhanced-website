@@ -32,7 +32,6 @@ if ('fetch' in window && 'DOMParser' in window) {
                         isSaved.value = 'saved'
                     }
                     form.querySelector('button').classList.toggle('is-saved')
-                    document.querySelector('aricle').classList.toggle('message')
                 }
             })
         })
