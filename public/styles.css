@@ -509,13 +509,20 @@ input::placeholder {
 
 
 .save-favourite-btn svg {
-    width: 2.5em;
-    height: 2.5em;
+    width: 3.5em;
+    height: 3em;
+    position: absolute; 
+    left: 0em;
+    bottom: .1em;
     display: block;
 }
 
 .save-favourite-btn.is-saved .saved {
     display: block;
+}
+
+.save-favourite-btn.is-saved{
+    background-color: rgb(185, 233, 217);
 }
 
 .save-favourite-btn.is-saved .not-saved {
@@ -524,13 +531,6 @@ input::placeholder {
 
 .saved {
     display: none;
-}
-
-svg {
-    height: 2.5em;
-    position: absolute;
-    left: .6em;
-    top: .6em;
 }
 
 .slug {

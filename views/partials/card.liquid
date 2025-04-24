@@ -1,12 +1,12 @@
-
 <article class="card size-{{ size }}" id="{{ item.id }}">
     <div class="wrapper-img">
+
         <img class="product-img" loading="lazy" src="{{ item.image }}" width="150" height="130" alt="{{ item.name }}">
 
         <form action="/{{ item.id }}" method="post" data-enhanced="form-{{ item.id }}">
-        <input hidden type="text" name="milledoni_products_id" value="{{ item.id }}" />
-        <input hidden type="text" name="milledoni_users_id" value="9" />
-        {% if item.is_saved %}
+            <input hidden type="text" name="milledoni_products_id" value="{{ item.id }}" />
+            <input hidden type="text" name="milledoni_users_id" value="9" />
+            {% if item.is_saved %}
             <input hidden type="text" name="liked_status" value="saved" />
             <button type="submit" class="save-favourite-btn is-saved">
                 {% else %}
@@ -15,10 +15,10 @@
                     {%endif%}
                     {% comment %} Zo kan je svgs inladen: {% endcomment %}
                     <span class="saved">
-                        {% render 'svgs/favourites.svg' %}
+                        {% render 'svgs/saved.svg' %}
                     </span>
                     <span class="not-saved">
-                        {% render 'svgs/to-favourite.svg' %}
+                        {% render 'svgs/notsaved.svg' %}
                     </span>
                 </button>
         </form>
