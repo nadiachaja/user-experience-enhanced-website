@@ -521,9 +521,9 @@ input::placeholder {
     display: block;
 }
 
-.save-favourite-btn.is-saved{
+/* .save-favourite-btn.is-saved{
     background-color: rgb(185, 233, 217);
-}
+} */
 
 .save-favourite-btn.is-saved .not-saved {
     display: none;

@@ -3,7 +3,7 @@ import express from 'express'
 import { Liquid } from 'liquidjs';
 
 const likesBaseUrl = 'https://fdnd-agency.directus.app/items/milledoni_users/9?fields=*.*'
-const apiResponse = await fetch('https://fdnd-agency.directus.app/items/milledoni_products')
+const apiResponse = await fetch('https://fdnd-agency.directus.app/items/milledoni_products/?fields=id,slug,name,image,tags,img.id,img.height,img.width,img.type&sort=id')
 const apiResponseJSON = await apiResponse.json()
 
 const app = express()
