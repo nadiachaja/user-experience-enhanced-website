@@ -436,7 +436,7 @@ input::placeholder {
 
 .product-img {
     height: 11em;
-    width: 14em;
+    width: 11em;
     display: flex;
     justify-self: center;
     margin: .5em;
