@@ -2,14 +2,19 @@
     <div class="wrapper-img">
 
         {% if item.img %}
-    <picture>
-        <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ item.img.id }}?format=avif">
-        <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ item.img.id }}?format=webp">
-        <img class="product-img" loading="lazy" src="https://fdnd-agency.directus.app/assets/{{ item.img.id }}" width="150" height="130" alt="{{ item.name }}">
- </picture> 
- {% else %}
- <img class="product-img" src="/assets/landscape-placeholder-svgrepo-com.svg" alt="geen afbeelding gevonden">
-{% endif %}
+        <picture>
+            <source type="image/avif" srcset="https://fdnd-agency.directus.app/assets/{{ item.img.id }}?format=avif">
+            <source type="image/webp" srcset="https://fdnd-agency.directus.app/assets/{{ item.img.id }}?format=webp">
+            <img class="product-img" loading="lazy" src="https://fdnd-agency.directus.app/assets/{{ item.img.id }}"
+                width="150" height="130" alt="{{ item.name }}">
+        </picture>
+        {% else %}
+        <picture>
+            <source type="image/avif" srcset="/assets/landscape-placeholder-svgrepo-com.avif">
+            <source type="image/webp" srcset="/assets/landscape-placeholder-svgrepo-com.webp">
+            <img class="product-img" src="/assets/landscape-placeholder-svgrepo-com.svg" alt="geen afbeelding gevonden">
+        </picture>
+        {% endif %}
 
 
         <form action="/{{ item.id }}" method="post" data-enhanced="form-{{ item.id }}">
