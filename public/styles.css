@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Parkinsans';
 }
 
 html,
@@ -158,6 +159,8 @@ section.products-home {
     order: 2;
     display: flex;
     align-items: center;
+    background-color: var(--bg-cards-homepage);
+    border-radius: var(--border-radius-m);
 
     @media screen and (min-width:1000px) {
         display: grid;
@@ -192,8 +195,10 @@ section.wrapper-spotters-join {
     border: none;
     display: flex;
     align-items: center;
-    background-color: var(--bg-general);
+    background-color: var(--bg-cards-homepage);
     font-size: var(--xs-paragraph);
+    border-radius: var(--border-radius-m);
+    padding: .5em;
 }
 
 .filter {
@@ -383,6 +388,7 @@ input::placeholder {
     padding: .7em;
     background-color: var(--bg-button);
     border-radius: var(--border-radius-xxxl);
+    border: none;
 }
 
 .container-search {
@@ -400,11 +406,12 @@ input::placeholder {
     background-color: var(--bg-secondary);
     margin: 1em;
     height: 20em;
-    width: 15em;
+    width: 17em;
     box-shadow: var(--box-shadow-l);
     display: flex;
     flex-direction: column;
     scroll-margin-top: 150px;
+    border-radius: var(--border-radius-xs);
 }
 
 /*LOADING*/
@@ -435,8 +442,8 @@ input::placeholder {
 }
 
 .product-img {
-    height: 11em;
-    width: 11em;
+    /* height: 11em;
+    width: 11em; */
     display: flex;
     justify-self: center;
     margin: .5em;
@@ -479,8 +486,8 @@ input::placeholder {
     display: flex;
     gap: 1em;
     align-items: center;
-    margin-left: 1em;
-    margin-right: 1em;
+    /* margin-left: 1em;
+    margin-right: 1em; */
     margin-bottom: .5em;
     margin-top: auto;
 }
@@ -504,7 +511,7 @@ input::placeholder {
     top: 1em;
     right: 1em;
     z-index: 1;
-    border: 2px solid var(--bg-button);
+    border: 1px solid var(--bg-button);
 }
 
 
@@ -555,8 +562,8 @@ input::placeholder {
     flex-direction: column;
     margin: 1em;
     height: 20em;
-    width: 15em;
-    border-radius: var(--border-radius-m);
+    width: 17em;
+    border-radius: var(--border-radius-xs);
     padding: 1em;
     box-shadow: var(--box-shadow-l);
 }
