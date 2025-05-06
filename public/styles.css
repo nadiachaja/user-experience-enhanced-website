@@ -5,6 +5,48 @@
     font-family: 'Parkinsans';
 }
 
+@view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(page) {
+    /* animation: fade 0.2s linear forwards; */
+    animation: .5s ease-out both slide-out;
+  }
+  
+  /* New stuff coming in */
+  ::view-transition-new(page) {
+    /* animation: fade 0.3s linear reverse; */
+    animation: .5s ease-out both slide-in;
+  }
+  
+  /* @keyframes fade {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  } */
+
+  @keyframes slide-out {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
 html,
 body {
     scroll-behavior: smooth;
@@ -85,6 +127,8 @@ header {
     padding: 1em;
     border-radius: var(--border-radius-xxxl);
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: fit-content;
     border: 1px solid var(--bg-filters-not-choose);
     box-shadow: var(--box-shadow-s);
@@ -97,10 +141,10 @@ header {
     }
 }
 
-.favourite-list-img {
+/* .favourite-list-img {
     height: 1.5em;
     width: 1.5em;
-}
+} */
 
 .create-list {
     display: none;
@@ -124,10 +168,10 @@ header {
     box-shadow: var(--box-shadow-s);
 }
 
-.profile-img {
+/* .profile-img {
     height: 1.5em;
     width: 1.5em;
-}
+} */
 
 .products-home {
     flex-direction: column;
