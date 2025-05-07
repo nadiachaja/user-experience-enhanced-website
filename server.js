@@ -24,8 +24,11 @@ app.get('/', async function (request, response) {
   
   
     const allProducts = apiResponseJSON.data;
-  
-    const items = checkSavedGifts(allProducts, savedGifts)
+    const items = allProducts;
+
+    if (savedGifts){
+    items = checkSavedGifts(allProducts, savedGifts)
+    }
   
     // console.log(items);
     response.render('index.liquid', { items: items })
@@ -34,7 +37,7 @@ app.get('/', async function (request, response) {
   function checkSavedGifts(allProducts, savedGifts) {
     // Deze functie geeft alle producten terug maar voegt een property toe 'is_saved'
     // waarmee je kan checken of een product gesaved is of niet.
-  
+  console.log(savedGifts);
     // We maken een simpele array van savedGifts; a la [20, 32] etc.
     const simpleSavedGifts = savedGifts.map(gift => {
       return gift.milledoni_products_id
@@ -79,7 +82,7 @@ app.listen(app.get('port'), function () {
         const favouriteResponseJSON = await favouriteResponse.json();
       
         // Extract saved product IDs
-        const savedProducts = favouriteResponseJSON.data[0].saved_products;
+        const savedProducts = favouriteResponseJSON.data[0].liked_products;
         const productIds = [...new Set(savedProducts.map(item => item.milledoni_products_id))]; // Remove duplicates
       
         // Fetch product details for each product ID
@@ -113,7 +116,7 @@ app.listen(app.get('port'), function () {
       }
       
       
-      const savedProductsUrl = 'https://fdnd-agency.directus.app/items/milledoni_users_milledoni_products'
+      const savedProductsUrl = 'https://fdnd-agency.directus.app/items/milledoni_users_milledoni_products_1'
       
       // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
       

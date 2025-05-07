@@ -1,6 +1,6 @@
 {% render 'partials/head.liquid', title: 'Favorieten cadeaus ' %}
-
-<nav style="view-transition-name:page">
+<div class="view-favorite" style="view-transition-name:page">
+<nav>
     <a class="go-back" href="/">
         <img class="back-img" src="/assets/back.svg" alt="back">Terug
     </a>
@@ -135,6 +135,6 @@
         {% endfor %}
     </article>
 </main>
-
+</div>
 
 {% render 'partials/footer.liquid' %}

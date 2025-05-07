@@ -5,36 +5,32 @@
     font-family: 'Parkinsans';
 }
 
+/*MARK: VIEW-TRANSITIONS*/
+
+@media not (prefers-reduced-motion: reduce) {
+	.view-favorite{ view-transition-name: page }
+	.general { view-transition-name: page }
+}
+
 @view-transition {
     navigation: auto;
   }
 
   ::view-transition-old(page) {
-    /* animation: fade 0.2s linear forwards; */
     animation: .5s ease-out both slide-out;
   }
   
   /* New stuff coming in */
   ::view-transition-new(page) {
-    /* animation: fade 0.3s linear reverse; */
     animation: .5s ease-out both slide-in;
   }
-  
-  /* @keyframes fade {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  } */
 
   @keyframes slide-out {
     from {
-      transform: translateX(0);
+      transform: translateY(0);
     }
     to {
-      transform: translateX(-100%);
+      transform: translateY(-100%);
     }
   }
   
@@ -141,10 +137,11 @@ header {
     }
 }
 
-/* .favourite-list-img {
-    height: 1.5em;
-    width: 1.5em;
-} */
+.favourite-list-img {
+    /* height: 1.5em;
+    width: 1.5em; */
+    display: flex;
+}
 
 .create-list {
     display: none;
@@ -168,10 +165,11 @@ header {
     box-shadow: var(--box-shadow-s);
 }
 
-/* .profile-img {
-    height: 1.5em;
-    width: 1.5em;
-} */
+.profile-img {
+    /* height: 1.5em;
+    width: 1.5em; */
+    display: flex;
+}
 
 .products-home {
     flex-direction: column;
@@ -287,6 +285,7 @@ legend {
     }
 }
 
+/* 
 .wrapper-filter {
     display: grid;
     grid-template-columns: 70% 1fr;
@@ -344,13 +343,26 @@ legend {
     border: 1px solid var(--bg-register);
     color: var(--bg-register);
     box-shadow: var(--box-shadow-m);
-}
+} */
 
 .wrapper-spotters-join {
     display: none;
+
+    @media screen and (min-width:1000px){
+        display: flex;
+        margin-bottom: 1em;
+    }
 }
 
+.spotters-join{
+    font-weight: var(--font-weight-normal);
+    font-size: var(--xs-paragraph);
+}
 
+.spotters-invite-img{
+    height: 4em;
+    width: 10em;
+}
 
 /*MARK:CHAT*/
 
@@ -504,11 +516,6 @@ input::placeholder {
     align-items: center;
 }
 
-.saved-spotters-img {
-    width: 3.5em;
-    height: 3em;
-}
-
 .gived-cadeau-img {
     width: 2em;
     height: 2em;
@@ -564,7 +571,7 @@ input::placeholder {
     height: 3em;
     position: absolute; 
     left: 0em;
-    bottom: .1em;
+    bottom: .3em;
     display: block;
 }
 
