@@ -99,7 +99,7 @@ header {
 
 .logo-tagline {
     display: none;
-    font-size: var(--m-subtitle);
+    font-size: var( --l-detail-heading);
     line-height: var(--line-height-s);
     font-weight: var(--font-weight-medium);
 
@@ -351,12 +351,15 @@ legend {
     @media screen and (min-width:1000px){
         display: flex;
         margin-bottom: 1em;
+        gap: .5em;
     }
 }
 
 .spotters-join{
     font-weight: var(--font-weight-normal);
     font-size: var(--xs-paragraph);
+    display: flex;
+    align-items: center;
 }
 
 .spotters-invite-img{
@@ -563,6 +566,11 @@ input::placeholder {
     right: 1em;
     z-index: 1;
     border: 1px solid var(--bg-button);
+    transition: transform 0.3s ease;
+}
+
+.save-favourite-btn:hover{
+    transform: scale(1.1); 
 }
 
 
