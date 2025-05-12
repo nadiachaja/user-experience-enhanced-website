@@ -23,6 +23,10 @@ Millidoni is een bedrijf waar je cadeaus voor familie/vrienden/collega's of kenn
 <br>
 
 Het design van de homepagina is wat aangepast. De kaartjes zijn wat groter, de filters zijn weg, er zijn nieuwe afbeeldingen en de bookmark is veranderd als je een cadeau wil opslaan. Er zijn ook thema's bijvoorbeeld kerst en valentijnsdag. 
+Het nieuwe ontwerp heeft geen figma design. 
+
+**Vorige sprint**<br>
+<img width="440" alt="homepagina vorige sprint" src="https://github.com/user-attachments/assets/4b13ec9b-8cd9-46a8-8d10-fb0daa9c5b3b" />
 
 **Origineel**<br>
 <img width="456" alt="design home" src="https://github.com/user-attachments/assets/a98e0d6d-58bc-4e7e-8b3a-57aa4d6d7422" />
@@ -32,6 +36,28 @@ Het design van de homepagina is wat aangepast. De kaartjes zijn wat groter, de f
 
 **Valentijnsdag**<br>
 <img width="411" alt="design home valentijn" src="https://github.com/user-attachments/assets/52eea95a-010d-4222-b8be-36233dbf81cd" />
+
+Ik heb goed naar het design gekeken en aangepast wat ik kon aanpassen. Ik heb zelf de de bookmark gemaakt, omdat die niet in figma stond maar wel in het nieuwe design. <br>
+<br>
+**Oude bookmark** 
+<img width="34" alt="Scherm­afbeelding 2025-05-12 om 08 53 00" src="https://github.com/user-attachments/assets/653b7f4e-c26e-47b4-8657-c059d5a5c59d" />
+<img width="28" alt="Scherm­afbeelding 2025-05-12 om 08 53 24" src="https://github.com/user-attachments/assets/d53561db-ac30-46cf-95f5-474940503c01" />
+<br>
+<br>
+**Nieuwe bookmark** 
+<img width="41" alt="Scherm­afbeelding 2025-05-12 om 08 53 47" src="https://github.com/user-attachments/assets/fc87d629-a812-4c81-8b16-dc723839c07b" />
+<img width="39" alt="Scherm­afbeelding 2025-05-12 om 08 54 00" src="https://github.com/user-attachments/assets/a64362e1-8ebc-4f49-a889-e7b4c8bd2f05" />
+
+In het nieuwe ontwerp waren ook de filters bij de chat weg, die heb ik ook weg gehaald er is in het ontwerp een img komen te staan alleen kon ik nergens de img vinden. 
+De kaartjes waar de cadeau's staan is ook groter geworden, het stond ook zo in het design. Ik vind dit een goede aanpassing, omdat je de cadeau's zo beter ziet en meer plek heb om tekst onder de img te zetten. 
+
+**Oud ontwerp** <br>
+<img width="168" alt="Scherm­afbeelding 2025-05-12 om 09 01 53" src="https://github.com/user-attachments/assets/5fc453ed-83be-41da-8f69-94a8de205050" />
+<br>
+<br>
+**Nieuw ontwerp**  <br>
+<img width="195" alt="Scherm­afbeelding 2025-05-12 om 09 01 46" src="https://github.com/user-attachments/assets/4b607594-51ec-42ea-8d84-24dd73d34c60" />
+
 
 ## Gebruik
 
